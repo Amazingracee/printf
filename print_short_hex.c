@@ -17,7 +17,7 @@ int prinhhex(va_list data, char *buf, unsigned int ibuf)
 
 	if (int_input == 0)
 	{
-		ibuf = mang_buffer(buf, '0', ibuf);
+		ibuf = mang_buf(buf, '0', ibuf);
 			return (1);
 	}
 	if (int_input < 0)
@@ -35,7 +35,7 @@ int prinhhex(va_list data, char *buf, unsigned int ibuf)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = mang_buffer(buf, hexadecimal[i], ibuf);
+			ibuf = mang_buf(buf, hexadecimal[i], ibuf);
 				count++;
 		}
 	}

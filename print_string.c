@@ -18,11 +18,11 @@ int print_string(va_list data, char *buf, unsigned int ibuf)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = mang_buffer(buf, nill[i], ibuf);
+			ibuf = mang_buf(buf, nill[i], ibuf);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
-		ibuf = mang_buffer(buf, str[i], ibuf);
+		ibuf = mang_buf(buf, str[i], ibuf);
 
 	return (i);
 }

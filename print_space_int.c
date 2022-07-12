@@ -17,12 +17,12 @@ int prinsint(va_list data, char *buf, unsigned int ibuf)
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
-		ibuf = mang_buffer(buf, '-', ibuf);
+		ibuf = mang_buf(buf, '-', ibuf);
 	}
 	else
 	{
 		int_in = int_input;
-		ibuf = mang_buffer(buf, ' ', ibuf);
+		ibuf = mang_buf(buf, ' ', ibuf);
 	}
 	int_temp = int_in;
 	div = 1;
@@ -33,7 +33,7 @@ int prinsint(va_list data, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = mang_buffer(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = mang_buf(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i + 1);
 }

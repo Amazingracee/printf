@@ -17,7 +17,7 @@ int prinnhex(va_list data, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = mang_buffer(buf, '0', ibuf);
+		ibuf = mang_buf(buf, '0', ibuf);
 			return (1);
 	}
 	if (int_input < 0)
@@ -25,8 +25,8 @@ int prinnhex(va_list data, char *buf, unsigned int ibuf)
 		int_input = (int_input * -1) - 1;
 			isnegative = 1;
 	}
-	ibuf = mang_buffer(buf, '0', ibuf);
-	ibuf = mang_buffer(buf, 'x', ibuf);
+	ibuf = mang_buf(buf, '0', ibuf);
+	ibuf = mang_buf(buf, 'x', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
@@ -37,7 +37,7 @@ int prinnhex(va_list data, char *buf, unsigned int ibuf)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = mang_buffer(buf, hexadecimal[i], ibuf);
+			ibuf = mang_buf(buf, hexadecimal[i], ibuf);
 				count++;
 		}
 	}

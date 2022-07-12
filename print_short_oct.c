@@ -17,7 +17,7 @@ int prinhoct(va_list data, char *buf, unsigned int ibuf)
 
 	if (int_input == 0)
 	{
-		ibuf = mang_buffer(buf, '0', ibuf);
+		ibuf = mang_buf(buf, '0', ibuf);
 			return (1);
 	}
 	if (int_input < 0)
@@ -31,11 +31,11 @@ int prinhoct(va_list data, char *buf, unsigned int ibuf)
 	octal = fill_short_oct_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+i		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = mang_buffer(buf, octal[i], ibuf);
+			ibuf = mang_buf(buf, octal[i], ibuf);
 				count++;
 		}
 	}

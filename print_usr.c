@@ -23,17 +23,17 @@ int print_usr(va_list data, char *buf, unsigned int ibuf)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			ibuf = mang_buffer(buf, '\\', ibuf);
-			ibuf = mang_buffer(buf, 'x', ibuf);
+			ibuf = mang_buf(buf, '\\', ibuf);
+			ibuf = mang_buf(buf, 'x', ibuf);
 			op = str[i];
 			binary = fill_binary_array(binary, op, 0, 32);
 			hexadecimal = fill_hex_array(binary, hexadecimal, 1, 8);
-			ibuf = mang_buffer(buf, hexadecimal[6], ibuf);
-			ibuf = mang_buffer(buf, hexadecimal[7], ibuf);
+			ibuf = mang_buf(buf, hexadecimal[6], ibuf);
+			ibuf = mang_buf(buf, hexadecimal[7], ibuf);
 			sum += 3;
 		}
 		else
-			ibuf = mang_buffer(buf, str[i], ibuf);
+			ibuf = mang_buf(buf, str[i], ibuf);
 	}
 	free(binary);
 	free(hexadecimal);

@@ -22,7 +22,7 @@ int print_unst(va_list data, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = mang_buffer(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuf = mang_buf(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i);
 }

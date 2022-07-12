@@ -19,7 +19,7 @@ int print_rev(va_list data, char *buf, unsigned int ibuf)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = mang_buffer(buf, nill[i], ibuf);
+			ibuf = mang_buf(buf, nill[i], ibuf);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
@@ -27,7 +27,7 @@ int print_rev(va_list data, char *buf, unsigned int ibuf)
 		j = i - 1;
 	for (; j >= 0; j--)
 	{
-		ibuf = mang_buffer(buf, str[j], ibuf);
+		ibuf = mang_buf(buf, str[j], ibuf);
 	}
 	return (i);
 }
