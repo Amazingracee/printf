@@ -20,6 +20,8 @@ typedef struct print
 } print_t;
 
 int _printf(const char *format, ...);
+int print_ncs(va_list a __attribute__((unused)), char *buf, unsigned int i);
+int print_ncs0(va_list a __attribute__((unused)), char *buf, unsigned int i);
 int print_prg(va_list __attribute__((unused)), char *, unsigned int);
 int print_char(va_list data, char *buf, unsigned int ibuf);
 int print_string(va_list data, char *buf, unsigned int ibuf);
