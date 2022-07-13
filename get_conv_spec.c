@@ -38,7 +38,7 @@ int (*get_conv_spec(const char *s, int index))(va_list, char *, unsigned int)
 	};
 	int i = 0, j = 0, first_index;
 
-	iifirst_index = index;
+	first_index = index;
 	while (pr[i].type_arg)
 	{
 		if (s[index] == pr[i].type_arg[j])
